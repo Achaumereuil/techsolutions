@@ -11,7 +11,7 @@ function nav_aria($file){ global $current; return $current === $file ? ' aria-cu
 <header class="site-header">
   <div class="container">
     <div class="brand">
-      <span class="logo">TS</span>
+      <img src="images/logot-s.jpg" alt="<?= SITE_NAME ?> logo" class="logo">
       <span class="name"><?= SITE_NAME ?></span>
     </div>
     <nav class="menu">
