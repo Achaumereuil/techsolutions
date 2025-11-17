@@ -6,18 +6,28 @@ function nav_aria($file){ global $current; return $current === $file ? ' aria-cu
 <!doctype html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= SITE_NAME ?></title>
-<link rel="stylesheet" href="styles.css"></head><body>
+<meta name="description" content="<?= SITE_DESCRIPTION ?>">
+<meta name="keywords" content="IT, développement, cybersécurité, UX, support, TechSolutions">
+<link rel="stylesheet" href="styles.css">
+  <!-- Favicon / tab logo -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/Logo_TS.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/Logo_TS.png">
+  <link rel="shortcut icon" href="images/Logo_TS.png" />
+</head><body>
 <!-- Header + Hero (cyberpunk / neon redesign) -->
 <header class="site-header">
   <div class="container">
     <div class="brand">
-      <img src="images/logot-s.jpg" alt="<?= SITE_NAME ?> logo" class="logo">
+      <img src="images/Logo_TS.png" alt="<?= SITE_NAME ?> logo" class="logo" loading="lazy">
       <span class="name"><?= SITE_NAME ?></span>
     </div>
     <nav class="menu">
       <a href="index.php" class="<?= nav_active('index.php') ?>"<?= nav_aria('index.php') ?>>Accueil</a>
       <a href="services.php" class="<?= nav_active('services.php') ?>"<?= nav_aria('services.php') ?>>Services</a>
+      <a href="a-propos.php" class="<?= nav_active('a-propos.php') ?>"<?= nav_aria('a-propos.php') ?>>À propos</a>
+      <a href="nos-valeurs.php" class="<?= nav_active('nos-valeurs.php') ?>"<?= nav_aria('nos-valeurs.php') ?>>Nos valeurs</a>
       <a href="contact.php" class="<?= nav_active('contact.php') ?>"<?= nav_aria('contact.php') ?>>Contact</a>
+      <a href="gestion-de-parc.php" class="<?= nav_active('gestion-de-parc.php') ?>"<?= nav_aria('gestion-de-parc.php') ?>>Gestion de parc</a>
     </nav>
   </div>
 
