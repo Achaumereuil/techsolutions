@@ -15,10 +15,10 @@
   --muted: #a7b0c0;
   --card-bg: rgba(10,10,15,0.6);
   --glass: rgba(255,255,255,0.03);
-  --text: #e9f7ff;
+  --text: #ffffff;
 }
 
-html,body{height:100%;font-family:Inter, 'Segoe UI', Roboto, system-ui, Arial;}
+html,body{height:100%;font-family:Inter, 'Segoe UI', Roboto, system-ui, Arial;font-size:16px;line-height:1.6;}
 body{
   margin:0;
   color:var(--text);
@@ -41,7 +41,7 @@ body::after{
   content: '';
   position: fixed;
   inset: 0;
-  background: linear-gradient(rgba(2,2,6,0.45), rgba(6,6,12,0.55));
+  background: linear-gradient(rgba(2,2,6,0.5), rgba(6,6,12,0.6));
   pointer-events: none;
   z-index:1;
 }
@@ -72,17 +72,18 @@ body::after{
 
 /* Recreate original hero typography for the moved copy */
 .hero-title{
-  font-size:2.4rem;
-  margin:18px 0 6px;
+  font-size:2.8rem;
+  margin:24px 0 8px;
   color:var(--text);
-  line-height:1.02;
+  line-height:1.1;
   letter-spacing:1px;
-  text-shadow:0 18px 60px rgba(255,60,255,0.06),0 8px 28px rgba(0,240,255,0.04);
+  text-shadow:0 20px 70px rgba(255,60,255,0.08),0 10px 35px rgba(0,240,255,0.06);
 }
 .hero-desc{
   color:var(--muted);
-  margin:6px 0 18px;
-  font-size:1.05rem;
+  margin:8px 0 20px;
+  font-size:1.15rem;
+  line-height:1.5;
 }
 .site-header::before{
   /* subtle scanline / city glow */
@@ -108,8 +109,8 @@ body::after{
 
 .hero{position:relative;z-index:2;display:flex;gap:24px;align-items:center;padding:24px 20px 60px;margin-top:28px}
 .hero .left{max-width:640px}
-.hero h1{font-size:2.6rem;margin:0 0 8px;line-height:1.02;color:var(--text);text-shadow:0 12px 40px rgba(0,240,255,0.06),0 6px 24px rgba(255,40,160,0.03)}
-.hero p{color:var(--muted);margin:8px 0 18px;font-size:1.05rem}
+.hero h1{font-size:3rem;margin:0 0 10px;line-height:1.1;color:var(--text);text-shadow:0 15px 50px rgba(0,240,255,0.08),0 8px 30px rgba(255,40,160,0.05)}
+.hero p{color:var(--muted);margin:10px 0 20px;font-size:1.15rem;line-height:1.5}
 .hero .cta{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--neon-cyan),var(--neon-pink));color:#03101a;font-weight:700;cursor:pointer;box-shadow:0 12px 40px rgba(0,240,255,0.06)}
 .hero .secondary{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text);padding:10px 14px;border-radius:10px}
 
@@ -121,9 +122,9 @@ body::after{
 .card{background:linear-gradient(180deg, rgba(8,6,18,0.6), rgba(6,6,12,0.45));border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.04);box-shadow:0 10px 40px rgba(2,6,16,0.8);transition:transform .18s,box-shadow .18s;padding:0}
 .card:hover{transform:translateY(-6px);box-shadow:0 18px 60px rgba(2,6,24,0.85)}
 .card img{width:100%;height:160px;object-fit:cover;display:block}
-.card .p{padding:14px}
-.card h3{margin:0 0 8px;font-size:1.06rem}
-.card p{color:var(--muted);margin:0 0 12px}
+.card .p{padding:18px}
+.card h3{margin:0 0 10px;font-size:1.2rem;font-weight:600}
+.card p{color:var(--muted);margin:0 0 14px;font-size:1rem;line-height:1.5}
 
 .price{font-weight:800;color:var(--neon-cyan);background:none;padding:6px 10px;border-radius:6px}
 
@@ -158,23 +159,23 @@ footer.site-footer{padding:28px 0;background:linear-gradient(180deg, rgba(0,0,0,
     radial-gradient(800px 200px at 10% 20%, rgba(69,179,255,0.06), transparent 10%),
     radial-gradient(700px 220px at 90% 80%, rgba(255,40,160,0.05), transparent 12%),
     linear-gradient(180deg, rgba(6,6,16,0.9), rgba(8,6,22,0.7));
-  border-bottom:1px solid rgba(255,255,255,0.02);
+  border-bottom:1px solid rgba(255,255,255,0.08);
 }
 .hero-inner{display:flex;align-items:center;gap:28px}
 .hero-copy{flex:1;max-width:760px}
 .hero-art{flex:1;min-height:220px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.25));box-shadow:0 18px 80px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.03)}
-.hero-title{font-size:2.8rem;margin:0 0 8px;color:var(--text);line-height:1.02;letter-spacing:1px;text-shadow:0 18px 60px rgba(255,60,255,0.06),0 8px 28px rgba(0,240,255,0.04)}
-.hero-desc{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
+.hero-title{font-size:3.2rem;margin:0 0 10px;color:var(--text);line-height:1.1;letter-spacing:1px;text-shadow:0 20px 70px rgba(255,60,255,0.08),0 10px 35px rgba(0,240,255,0.06)}
+.hero-desc{color:var(--muted);margin:0 0 20px;font-size:1.2rem;line-height:1.5}
 .hero-banner .cta{display:inline-block;margin-right:12px}
 
-.section-title{font-size:1.6rem;color:var(--text);margin:28px 0 12px}
+.section-title{font-size:1.8rem;color:var(--text);margin:32px 0 16px;font-weight:600;text-shadow:0 8px 30px rgba(0,0,0,0.5)}
 
 /* Product card tweaks for neon accents */
 .card{background:linear-gradient(180deg, rgba(12,12,20,0.7), rgba(8,8,14,0.55));border-radius:12px;overflow:hidden;border:1px solid rgba(69,179,255,0.04);box-shadow:0 12px 50px rgba(0,0,0,0.7);}
 .card--form{padding:18px;display:block}
 .card--form input,.card--form textarea{width:100%;box-sizing:border-box}
 .card--form p{margin:0 0 12px}
-.card h3{color:var(--text)}
+.card h3{color:var(--text);text-shadow:0 4px 15px rgba(0,0,0,0.4)}
 .price{color:var(--neon-cyan);font-weight:800}
 
 /* Buttons */
@@ -185,7 +186,7 @@ footer.site-footer{padding:28px 0;background:linear-gradient(180deg, rgba(0,0,0,
 input:focus,textarea:focus,select:focus{outline:none;box-shadow:0 0 0 3px rgba(0,240,255,0.08),0 6px 24px rgba(0,0,0,0.4);border-color:var(--neon-cyan)}
 
 /* Tweak headings for improved legibility */
-h1,h2,h3{color:var(--text);text-shadow:0 12px 36px rgba(0,0,0,0.6)}
+h1,h2,h3{color:var(--text);text-shadow:0 15px 45px rgba(0,0,0,0.7);font-weight:600}
 
 /* Subtle fade-in animations for hero content */
 @keyframes fadeUp{

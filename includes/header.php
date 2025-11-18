@@ -23,9 +23,7 @@ function nav_aria($file){ global $current; return $current === $file ? ' aria-cu
     </div>
     <nav class="menu">
       <a href="index.php" class="<?= nav_active('index.php') ?>"<?= nav_aria('index.php') ?>>Accueil</a>
-      <a href="services.php" class="<?= nav_active('services.php') ?>"<?= nav_aria('services.php') ?>>Services</a>
-      <a href="a-propos.php" class="<?= nav_active('a-propos.php') ?>"<?= nav_aria('a-propos.php') ?>>À propos</a>
-      <a href="nos-valeurs.php" class="<?= nav_active('nos-valeurs.php') ?>"<?= nav_aria('nos-valeurs.php') ?>>Nos valeurs</a>
+      <a href="actualites.php" class="<?= nav_active('actualites.php') ?>"<?= nav_aria('actualites.php') ?>>Actualités</a>
       <a href="contact.php" class="<?= nav_active('contact.php') ?>"<?= nav_aria('contact.php') ?>>Contact</a>
       <a href="gestion-de-parc.php" class="<?= nav_active('gestion-de-parc.php') ?>"<?= nav_aria('gestion-de-parc.php') ?>>Gestion de parc</a>
     </nav>
