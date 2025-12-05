@@ -25,22 +25,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <title>Connexion Administrateur — TechSolutions</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body style="display:flex;align-items:center;justify-content:center;height:100vh;background:linear-gradient(180deg,#06050b,#0f1224)">
-  <div class="card" style="width:100%;max-width:320px;padding:24px">
-    <h1 style="text-align:center;margin-top:0">Administrateur</h1>
-    <?php if ($error): ?>
-      <p style="color:#ff2fb6;text-align:center"><?= htmlspecialchars($error) ?></p>
-    <?php endif; ?>
-    <form method="post" style="display:flex;flex-direction:column;gap:12px">
-      <label>
-        Identifiant
-        <input type="text" name="username" required style="width:100%;margin-top:6px">
-      </label>
-      <label>
-        Mot de passe
-        <input type="password" name="password" required style="width:100%;margin-top:6px">
-      </label>
-      <button type="submit" class="btn" style="align-self:center">Se connecter</button>
+<body class="auth-page">
+  <div class="card auth-card">
+    <h1 class="center-title">Administrateur</h1>
+    <?php if ($error): ?><p class="error-text"><?= htmlspecialchars($error) ?></p><?php endif; ?>
+    <form method="post" class="form-column">
+      <label>Identifiant<input type="text" name="username" required></label>
+      <label>Mot de passe<input type="password" name="password" required></label>
+      <button type="submit" class="btn center-btn">Se connecter</button>
     </form>
   </div>
 </body>

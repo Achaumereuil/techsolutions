@@ -7,9 +7,11 @@ require_once __DIR__ . '/includes/header.php';
   <div class="hero-inner container">
     <div class="hero-copy">
       <h1 class="hero-title">TechSolutions — Services informatiques sur mesure</h1>
-      <p class="hero-desc"><?= SITE_DESCRIPTION ?></p>
+      <p class="hero-desc lead"><?= SITE_DESCRIPTION ?></p>
     </div>
-    <div class="hero-art" aria-hidden="true"></div>
+    <div class="hero-art" aria-hidden="true">
+      <img src="images/Logo_TS.png" alt="TechSolutions logo" class="logo logo--big">
+    </div>
   </div>
 </section>
 
@@ -23,18 +25,22 @@ require_once __DIR__ . '/includes/header.php';
     <p><strong>Contact :</strong> Mme Anna LISE (Directrice des Opérations)</p>
   </div>
 
-  <div class="card" style="margin-top:24px">
+  <div class="card mt-24">
     <h2>Présentation de l'entreprise</h2>
     <p>TechSolutions est une entreprise de services informatiques composée de plusieurs départements :</p>
-    <ul style="line-height:1.6;">
-      <li><strong>Développement logiciel</strong> (15 personnes) — Création et maintenance de logiciels sur mesure.</li>
-      <li><strong>Infrastructures systèmes &amp; réseau</strong> (5 personnes) — Mise en place des réseaux, serveurs et infrastructures.</li>
-      <li><strong>Design UX/UI</strong> (5 personnes) — Création d'interfaces modernes, esthétiques et ergonomiques.</li>
-      <li><strong>Marketing &amp; Vente</strong> (10 personnes) — Stratégie commerciale, communication et relation client.</li>
-      <li><strong>Support client</strong> (5 personnes) — Assistance technique et accompagnement des clients.</li>
-      <li><strong>Ressources humaines &amp; administration</strong> (5 personnes) — Gestion du personnel, recrutement, fichiers administratifs.</li>
-      <li><strong>Direction</strong> (5 personnes) — Stratégie globale et gestion de l'entreprise.</li>
-    </ul>
+    <div class="two-cols">
+      <ul>
+        <li><strong>Développement logiciel</strong> (15 personnes) — Création et maintenance de logiciels sur mesure.</li>
+        <li><strong>Infrastructures systèmes &amp; réseau</strong> (5 personnes) — Mise en place des réseaux, serveurs et infrastructures.</li>
+        <li><strong>Design UX/UI</strong> (5 personnes) — Création d'interfaces modernes, esthétiques et ergonomiques.</li>
+        <li><strong>Marketing &amp; Vente</strong> (10 personnes) — Stratégie commerciale, communication et relation client.</li>
+      </ul>
+      <ul>
+        <li><strong>Support client</strong> (5 personnes) — Assistance technique et accompagnement des clients.</li>
+        <li><strong>Ressources humaines &amp; administration</strong> (5 personnes) — Gestion du personnel, recrutement, fichiers administratifs.</li>
+        <li><strong>Direction</strong> (5 personnes) — Stratégie globale et gestion de l'entreprise.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -46,7 +52,7 @@ require_once __DIR__ . '/includes/header.php';
       <div class="p">
         <h3>Développement logiciel</h3>
         <p>Création et maintenance de logiciels sur mesure adaptés à vos besoins spécifiques.</p>
-        <ul style="line-height:1.5;">
+        <ul class="tight-list">
           <li>Applications web et mobiles</li>
           <li>Logiciels métier</li>
           <li>Intégrations système</li>
@@ -59,7 +65,7 @@ require_once __DIR__ . '/includes/header.php';
       <div class="p">
         <h3>Réseau & infrastructures</h3>
         <p>Mise en place, configuration et maintenance de vos réseaux et serveurs.</p>
-        <ul style="line-height:1.5;">
+        <ul class="tight-list">
           <li>Conception réseau</li>
           <li>Déploiement de serveurs</li>
           <li>Cloud et virtualisation</li>
@@ -112,9 +118,9 @@ require_once __DIR__ . '/includes/header.php';
 
 <!-- Objectifs du site -->
 <section id="objectives" class="container">
-  <div class="card">
+  <div class="card callout">
     <h2>Objectifs du site</h2>
-    <ul style="line-height:1.6;">
+    <ul class="tight-list">
       <li>Présenter l'entreprise et ses services</li>
       <li>Afficher les actualités</li>
       <li>Offrir une interface administrateur (modification des données, compatible RGPD)</li>

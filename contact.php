@@ -1,7 +1,7 @@
 <?php require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/includes/db.php';
 $sent=false;$name=$_POST['name']??'';$email=$_POST['email']??'';$message=$_POST['message']??'';
 if($_SERVER['REQUEST_METHOD']==='POST' && $name!=='' && $email!=='' && $message!==''){ $sent=true; }
-function e($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
 ?>
 
 <!-- Hero for Contact -->
@@ -16,9 +16,9 @@ function e($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
 </section>
 
 <main class="container">
-  <?php if($sent): ?><p class="card">Merci <?= e($name) ?> ! (envoi factice)</p><?php endif; ?>
+  <?php if($sent): ?><div class="card card--padded mb-18">Merci <?= e($name) ?> ! (envoi factice)</div><?php endif; ?>
 
-  <section style="max-width:720px;margin:18px 0;">
+  <section class="narrow">
     <form method="post" class="card card--form">
       <p><label>Nom<br><input name="name" required value="<?= e($name) ?>"></label></p>
       <p><label>Email<br><input type="email" name="email" required value="<?= e($email) ?>"></label></p>
@@ -27,7 +27,7 @@ function e($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
     </form>
   </section>
 
-  <section class="card" style="margin-top:18px;">
+  <section class="card mt-24">
     <h3>Informations</h3>
     <p><strong>Adresse :</strong> <?= defined('COMPANY_ADDRESS') ? COMPANY_ADDRESS : '—' ?></p>
     <p><strong>Contact :</strong> <?= defined('COMPANY_CONTACT') ? COMPANY_CONTACT : '—' ?></p>
