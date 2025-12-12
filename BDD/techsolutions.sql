@@ -89,7 +89,7 @@ CREATE TABLE `pcs` (
 
 LOCK TABLES `pcs` WRITE;
 /*!40000 ALTER TABLE `pcs` DISABLE KEYS */;
-INSERT INTO `pcs` VALUES (1,'Développeur logiciel\r\n','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',779.00),(2,'Gestion Infrastructures, systèmes et réseaux\r\n','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',779.00),(3,'PC design UX/UI\r\n','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',779.00),(4,'Marketing et Vente','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',779.00),(5,'Support client','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',779.00),(6,'Ressources humaines et administration','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',779.00),(7,'Direction','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',779.00);
+INSERT INTO `pcs` VALUES (1,'Développeur logiciel\r\n','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',3512.83),(2,'Gestion Infrastructures, systèmes et réseaux\r\n','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',779.00),(3,'PC design UX/UI\r\n','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',779.00),(4,'Marketing et Vente','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',779.00),(5,'Support client','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',779.00),(6,'Ressources humaines et administration','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',779.00),(7,'Direction','https://i.ytimg.com/vi/SSIXFufMaVg/maxresdefault.jpg',779.00);
 /*!40000 ALTER TABLE `pcs` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -102,4 +102,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-12-12 11:21:01
+-- Dump completed on 2025-12-12 11:50:47

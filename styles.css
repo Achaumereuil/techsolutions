@@ -118,6 +118,10 @@ body::after{
 .auth-card{width:100%;max-width:320px;padding:24px}
 .center-title{text-align:center;margin-top:0}
 .error-text{color:#ff2fb6;text-align:center}
+.auth-page input {
+    background: white;
+    color: black;
+}
 .form-column input,.form-column textarea{width:100%;margin-top:6px}
 .site-header::before{
   
