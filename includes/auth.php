@@ -1,12 +1,9 @@
 <?php
-// includes/auth.php - Simple admin authentication
 require_once __DIR__ . '/../config.php';
 
-// Hard-coded credentials (for demo; use DB in production)
 define('ADMIN_USER', 'Techsolutions');
-define('ADMIN_PASS', 'Tech@1234'); // Change this!
+define('ADMIN_PASS', 'Tech@1234');
 
-// Session timeout in seconds (20 minutes)
 define('SESSION_TIMEOUT', 20 * 60);
 
 function is_admin_logged_in() {

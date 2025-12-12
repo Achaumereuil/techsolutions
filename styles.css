@@ -1,24 +1,20 @@
 
-/* Cyberpunk / Neon redesign for TechSolutions
-   - keeps existing HTML structure and PHP includes
-   - removes previous decorative shapes and focuses on neon/glow visual
-   Inspired by the provided image: dark city, cyan/pink/magenta glows
-*/
+
 
 *{box-sizing:border-box}
 :root{
-  --bg-dark: #030308;    /* darker near-black for stronger contrast */
-  --bg-mid:  #070816;    /* dark indigo */
+  --bg-dark: #030308;    
+  --bg-mid:  #070816;    
   --neon-cyan: #00f0ff;
   --neon-pink: #ff2fb6;
   --neon-blue: #45b3ff;
   --title-blue: var(--neon-blue);
-  --muted: #dfeefb;      /* much lighter secondary text for readability */
-  --card-bg: rgba(0,0,0,0.88); /* darker panel backgrounds */
-  /* Subtle accents to avoid monotony while staying sober */
-  --accent-1: #7dd3fc;   /* soft cyan */
-  --accent-2: #cdb4ff;   /* soft lavender */
-  --accent-3: #9fe6c4;   /* soft mint */
+  --muted: #dfeefb;      
+  --card-bg: rgba(0,0,0,0.88); 
+  
+  --accent-1: #7dd3fc;   
+  --accent-2: #cdb4ff;   
+  --accent-3: #9fe6c4;   
   --glass: rgba(255,255,255,0.02);
   --text: #ffffff;
 }
@@ -27,7 +23,7 @@ html,body{height:100%;font-family:Inter, 'Segoe UI', Roboto, system-ui, Arial;fo
 body{
   margin:0;
   color:var(--text);
-  /* Page background: image on top + subtle neon gradients beneath */
+  
   background-image:
     url('images/illustration-rain-futuristic-city.jpg'),
     radial-gradient(1200px 400px at 10% 10%, rgba(68,10,255,0.06), transparent 10%),
@@ -41,28 +37,28 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* Global overlay to improve contrast/readability over the background image */
+
 body::after{
   content: '';
   position: fixed;
   inset: 0;
-  /* stronger dark overlay to improve contrast over the background image */
+  
   background: linear-gradient(rgba(2,2,6,0.75), rgba(6,6,12,0.85));
   pointer-events: none;
   z-index:1;
 }
 
-/* Put main structural containers above the overlay */
+
 .container{position:relative;z-index:2}
 
-/* Make hero banner slightly darker so foreground text pops */
+
 .hero-banner{position:relative;overflow:hidden}
 .hero-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8));pointer-events:none;z-index:1}
 .hero-inner{position:relative;z-index:2}
 
 .container{max-width:1300px;margin:0 auto;padding:0 24px}
 
-/* Header / hero */
+
 .site-header{
   position:relative;
   min-height:320px;
@@ -71,12 +67,9 @@ body::after{
   color:var(--text);
 }
 
-/* Page intro (moved from header) */
-.page-intro{
-  display:none;
-}
 
-/* Recreate original hero typography for the moved copy */
+
+
 .hero-title{
   font-size:2.8rem;
   margin:24px 0 8px;
@@ -92,26 +85,25 @@ body::after{
   line-height:1.5;
 }
 
-/* Lead paragraph for improved readability */
+
 .lead{font-size:1.15rem;line-height:1.6;color:var(--muted);max-width:980px;margin-bottom:20px}
 
-/* Two-column lists for department/service listings */
+
 .two-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .two-cols ul{margin:0;padding-left:1.05rem}
 .two-cols li{margin-bottom:8px}
 
-/* Callout card for objectives/important notes */
+
 .card.callout{border-left:4px solid rgba(69,179,255,0.14);padding:18px;display:block}
 .card.callout h2{margin-top:0;margin-bottom:8px;color:var(--title-blue)}
 
-/* Value items spacing */
-.value-item{margin-bottom:12px}
+
 
 @media (max-width:900px){
   .two-cols{grid-template-columns:1fr}
   .container{padding:0 18px}
 }
-/* Utility helpers to replace inline styles */
+
 .mt-24{margin-top:24px}
 .mb-18{margin-bottom:18px}
 .narrow{max-width:720px;margin:18px 0}
@@ -122,13 +114,13 @@ body::after{
 .form-column{display:flex;flex-direction:column;gap:12px}
 .center-btn{align-self:center}
 .card--padded{padding:14px}
-/* Auth form specific */
+
 .auth-card{width:100%;max-width:320px;padding:24px}
 .center-title{text-align:center;margin-top:0}
 .error-text{color:#ff2fb6;text-align:center}
 .form-column input,.form-column textarea{width:100%;margin-top:6px}
 .site-header::before{
-  /* subtle scanline / city glow */
+  
   content:'';position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg, rgba(0,0,0,0.2), transparent 30%, rgba(20,8,40,0.35));
   mix-blend-mode:screen;opacity:0.9;
@@ -136,12 +128,12 @@ body::after{
 .site-header > .container:first-of-type{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2;padding:18px 20px}
 .brand{display:flex;align-items:center;gap:12px}
 .logo{display:inline-block;width:64px;height:64px;border-radius:10px;object-fit:cover;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 30px rgba(69,179,255,0.12),0 2px 10px rgba(0,240,255,0.06);} 
-.brand .name{font-weight:800;font-size:1.4rem;letter-spacing:1px;color:var(--text);}
+.brand .name{font-weight:800;font-size:1.4rem;letter-spacing:1px;color:var(--accent-2)}
 
 .site-header nav.menu a{color:var(--muted);margin-left:20px;text-decoration:none;padding:8px 12px;border-radius:6px;transition:all .18s}
 .site-header nav.menu a:hover{color:var(--accent-1);transform:translateY(-3px);text-shadow:0 6px 24px rgba(125,211,252,0.12);box-shadow:0 6px 30px rgba(125,211,252,0.06),0 0 14px rgba(205,180,255,0.03);background:linear-gradient(90deg, rgba(125,211,252,0.04), rgba(205,180,255,0.02));}
 
-/* Neon active / current state */
+
 .site-header nav.menu a.active, .site-header nav.menu a[aria-current="page"]{
   color:var(--accent-1);
   background:linear-gradient(90deg, rgba(125,211,252,0.06), rgba(205,180,255,0.03));
@@ -150,39 +142,35 @@ body::after{
 }
 
 .hero{position:relative;z-index:2;display:flex;gap:24px;align-items:center;padding:24px 20px 60px;margin-top:28px}
-.hero .left{max-width:640px}
 .hero h1{font-size:3rem;margin:0 0 10px;line-height:1.1;color:var(--text);text-shadow:0 15px 50px rgba(0,240,255,0.08),0 8px 30px rgba(255,40,160,0.05)}
 .hero p{color:var(--muted);margin:10px 0 20px;font-size:1.15rem;line-height:1.5}
 .hero .cta{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--neon-cyan),var(--neon-pink));color:#03101a;font-weight:700;cursor:pointer;box-shadow:0 12px 40px rgba(0,240,255,0.06)}
 .hero .secondary{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text);padding:10px 14px;border-radius:10px}
 
-.hero .visual{flex:1;display:flex;justify-content:center}
-.hero .visual .card-visual{width:320px;height:200px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.25));box-shadow:0 14px 60px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.03)}
 
-/* Grid + product cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin:28px 0 72px}
 .card{background:linear-gradient(180deg, rgba(8,8,10,0.6), rgba(6,6,8,0.55));border-radius:14px;overflow:hidden;border:2px solid var(--accent-1);box-shadow:0 10px 30px rgba(0,0,0,0.7);transition:transform .18s,box-shadow .18s;padding:0}
 .card:hover{transform:translateY(-6px);box-shadow:0 18px 60px rgba(34,180,170,0.08), 0 24px 80px rgba(0,0,0,0.7)}
 .card img{width:100%;height:160px;object-fit:cover;display:block}
 .card .p{padding:20px}
-.card h3{margin:0 0 12px;font-size:1.2rem;font-weight:700;color:var(--title-blue)}
+.card h3{margin:0 0 12px;font-size:1.1rem;font-weight:700;color:var(--text);text-shadow:0 4px 15px rgba(0,0,0,0.4)}
 .card p{color:var(--muted);margin:0 0 14px;font-size:1rem;line-height:1.5}
 
-/* small meta text */
+
 .small{color:rgba(223,238,251,0.7);font-size:0.95rem;margin-bottom:8px}
 
 .price{font-weight:800;color:var(--neon-cyan);background:none;padding:6px 10px;border-radius:6px}
 
-/* Slight tint variations for cards to reduce monotony while staying sober */
+
 .grid .card{border-color:var(--accent-1)}
 
-/* Form / contact */
+
 input,textarea,select{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:10px;border-radius:8px}
 
-/* Footer */
+
 footer.site-footer{padding:28px 0;background:linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.08));color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
 
-/* small responsive tweaks */
+
 @media (max-width:900px){
   .hero{flex-direction:column;padding-bottom:40px}
   .site-header{min-height:260px}
@@ -194,12 +182,12 @@ footer.site-footer{padding:28px 0;background:linear-gradient(180deg, rgba(0,0,0,
   .grid{gap:14px}
 }
 
-/* accessibility: respect reduced motion */
+
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
 }
 
-/* Hero banner (large visual area) */
+
 .hero-banner{
   width:100%;
   padding:60px 0 40px;
@@ -216,7 +204,7 @@ footer.site-footer{padding:28px 0;background:linear-gradient(180deg, rgba(0,0,0,
 .hero-desc{color:var(--muted);margin:0 0 20px;font-size:1.2rem;line-height:1.5}
 .hero-banner .cta{display:inline-block;margin-right:12px}
 
-/* Right-side large logo inside hero */
+
 .hero-art{display:flex;align-items:center;justify-content:center;padding:18px}
 .logo--big{width:220px;height:220px;border-radius:14px;object-fit:contain;border:1px solid rgba(255,255,255,0.06);box-shadow:0 18px 60px rgba(0,240,255,0.06);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12))}
 @media (max-width:900px){
@@ -228,37 +216,34 @@ footer.site-footer{padding:28px 0;background:linear-gradient(180deg, rgba(0,0,0,
 
 .section-title{font-size:1.8rem;color:var(--title-blue);margin:32px 0 16px;font-weight:700;text-shadow:0 8px 30px rgba(0,0,0,0.45)}
 
-/* Product card tweaks for neon accents */
+
 .card{background:var(--card-bg);border-radius:12px;overflow:hidden;border:1px solid rgba(69,179,255,0.02);box-shadow:0 16px 70px rgba(0,0,0,0.9);} 
 .card--form{padding:18px;display:block}
 .card--form input,.card--form textarea{width:100%;box-sizing:border-box}
 .card--form p{margin:0 0 12px}
-.card h3{color:var(--text);text-shadow:0 4px 15px rgba(0,0,0,0.4)}
 .price{color:var(--neon-cyan);font-weight:800}
 
-/* Buttons */
+
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:2px solid var(--accent-1);background:transparent;color:var(--accent-1);font-weight:700;cursor:pointer;transition:all .18s}
 .btn:hover{background:rgba(125,211,252,0.04);box-shadow:0 12px 40px rgba(125,211,252,0.06);transform:translateY(-3px)}
 .btn.secondary{background:transparent;color:var(--text);border:2px solid rgba(255,255,255,0.06)}
 
-/* Skills badges (outline pills) */
-.skills{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
-.skills .tag{display:inline-block;padding:10px 16px;border-radius:12px;border:2px solid var(--accent-1);color:var(--accent-1);background:transparent;font-weight:600}
 
-/* Form inputs focus for accessibility */
+
+
 input:focus,textarea:focus,select:focus{outline:none;box-shadow:0 0 0 3px rgba(0,240,255,0.08),0 6px 24px rgba(0,0,0,0.4);border-color:var(--neon-cyan)}
 
-/* Tweak headings for improved legibility */
+
 h1{color:var(--text);text-shadow:0 15px 45px rgba(0,0,0,0.7);font-weight:700}
 h2,h3{color:var(--title-blue);text-shadow:0 8px 30px rgba(0,0,0,0.45);font-weight:700}
 
-/* Make small headings inside cards slightly smaller but still blue */
+
 .card h3{font-size:1.1rem}
 
-/* Brand name subtle accent */
+
 .brand .name{color:var(--accent-2)}
 
-/* Subtle fade-in animations for hero content */
+
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(10px)}
   to{opacity:1;transform:translateY(0)}
@@ -268,10 +253,10 @@ h2,h3{color:var(--title-blue);text-shadow:0 8px 30px rgba(0,0,0,0.45);font-weigh
 .hero-copy .cta{animation:fadeUp 1s ease-out .24s both}
 .hero-art{animation:fadeUp 1.1s ease-out .2s both}
 
-/* Slight stagger for cards*/
+
 .grid .card{opacity:0;transform:translateY(8px);animation:fadeUp .7s ease-out .2s both}
 
-/* Navigation active state */
+
 .site-header nav.menu a[aria-current], .site-header nav.menu a.active{color:var(--neon-cyan);box-shadow:0 8px 30px rgba(0,240,255,0.04);}
 
 @media (max-width:900px){
@@ -279,3 +264,4 @@ h2,h3{color:var(--title-blue);text-shadow:0 8px 30px rgba(0,0,0,0.45);font-weigh
   .hero-art{width:100%;height:180px}
   .hero-title{font-size:1.8rem}
 }
+

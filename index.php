@@ -77,6 +77,11 @@ require_once __DIR__ . '/includes/header.php';
     <article class="card">
       <div class="p">
         <h3>Design UX/UI</h3>
+        <p>Analyse des besoins et parcours utilisateur.</p>
+        <li>Conception d’interfaces ergonomiques</li>
+        <li>Maquettage et prototypage interactif</li>
+        <li>Design systèmes & chartes graphiques</li>
+        <li>Tests utilisateurs et optimisation continue</li>
       </div>
     </article>
 
